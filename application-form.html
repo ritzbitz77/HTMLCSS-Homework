@@ -1,27 +1,23 @@
 {% extends 'base.html' %}
+
 {% block title %}
     <title>Apply today!</title>
-{% endblock%}
+{% endblock %}
 
-
-<!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Skills-HTML-CSS</title>
+{% block body %}
     <h1>Get the job of your dreams today!</h1>
-    Our company is looking for talented women in tech! Start by filling out the form below.<br>
+    <p>Our company is looking for talented women in tech! Start by filling out the form below.</p><br>
     <br>
 
     <form action='/application' method='POST'>
 
-        <label for="name">First Name:</label><input type="text" name="firstname">
-        <label for="name"><b>Last Name:</b></label><input type="text" name="lastname"><br> 
-        <label for="name">Salary:</label><input type="text" name="salary"><br>
+        <label for="firstname">First Name:</label><input type="text" name="firstname">
+        <label for="lastname"><b>Last Name:</b></label><input type="text" name="lastname"><br> 
+        <label for="salary">Salary:</label><input type="number" name="salary"><br>
         
 
         Position of Interest:
-            <select name="position" name="select">
+            <select name="position">
              <label for="position">Choose your position of interest</label>
                 <option value="softwareengineer">Software Engineer</option>
                 <option value="qaengineer">QA Engineer</option>
@@ -29,10 +25,4 @@
             </select><br>
         <input type="submit" name="submit" value="Submit">
     </form>
-</head>
-<body>
-
-<!-- your html goes here -->
-
-</body>
-</html>
+{% endblock %}
